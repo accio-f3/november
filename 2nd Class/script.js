@@ -18,15 +18,16 @@ const deepClone = (oldObj) => {
     // of key value pairs
     // Object.enteries
     const arrayOfKeyValue = Object.entries(oldObj);
+    console.log(arrayOfKeyValue);
     let deepClonedVersionOfArray = arrayOfKeyValue.map((item) => [
       item[0],
       deepClone(item[1]),
     ]);
+    console.log(deepClonedVersionOfArray);
     const finalObj = Object.fromEntries(deepClonedVersionOfArray);
     return finalObj;
 }
 
 const res = deepClone(obj);
-res.c.q=100;
-console.log(res);
-console.log(obj);
+
+
