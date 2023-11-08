@@ -14,8 +14,8 @@ const deepClone = (oldObj) => {
     const type = typeof oldObj;
     if (type !== "object" || !oldObj) return oldObj;
 
-    if(Array.isArray(oldObj)){
-      return oldObj.map(item => deepClone(item));
+    if (Array.isArray(oldObj)) {
+      return oldObj.map((item) => deepClone(item));
     }
 
     // I want to convert my obj to array
@@ -33,3 +33,6 @@ const deepClone = (oldObj) => {
 }
 
 const res = deepClone(obj);
+
+
+// sir map me curly braces hote h but in line 26 why using [ ]
