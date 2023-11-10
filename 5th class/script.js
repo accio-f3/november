@@ -49,11 +49,3 @@
 // delete obj.a;
 // console.log(obj);
 
-
-let arr = [1, 2, 3];
-
-delete Array.prototype.map;
-
-arr.map((item) => console.log(item));
-// map is coming from arr.__proto__
-// or Array.prototype
