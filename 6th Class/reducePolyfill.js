@@ -2,12 +2,6 @@ delete Array.prototype.reduce;
 
 Array.prototype.reduce = function (callBackFn, initialValue) {
     let accumulator = initialValue;
-    // there's a very chance that this initialValue in undefined
-
-    // if initialValue in undefined make it 0
-    // this is what my intuition says
-    // if my initialValue in undefined
-    // make it 0th element of array
     for (let i = 0; i < this.length; i++) {
         // when i ===0
         if (accumulator === undefined) {
