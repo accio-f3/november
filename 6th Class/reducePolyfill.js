@@ -1,12 +1,25 @@
-// delete Array.prototype.reduce;
+delete Array.prototype.reduce;
 
-// Array.prototype.reduce = function (callBackFn, initialValue) {
-//     let accumulator = initialValue;
-//     for (let i = 0; i < this.length; i++) {
-//         accumulator = callBackFn(accumulator, this[i]);
-//     }
-//     return accumulator;
-// }
+Array.prototype.reduce = function (callBackFn, initialValue) {
+    let accumulator = initialValue;
+    // there's a very chance that this initialValue in undefined
+
+    // if initialValue in undefined make it 0
+    // this is what my intuition says
+    // if my initialValue in undefined
+    // make it 0th element of array
+    for (let i = 0; i < this.length; i++) {
+        // when i ===0
+        if (accumulator === undefined) {
+            accumulator = this[i]; // 0 or i
+        }
+        // when i>0
+        else {
+            accumulator = callBackFn(accumulator, this[i]);
+        }
+    }
+    return accumulator;
+}
 
 // let arr = [9, 2, 10];
 
