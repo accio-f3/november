@@ -14,6 +14,7 @@ Function.prototype.call = function(contextObj,...restArgs){
     // inside object
     contextObj.tempFn = this;
     const result = contextObj.tempFn(...restArgs);
+    // const result = contextObj.tempFn(restArgs[0],restArgs[1],restArgs[2]);
     delete contextObj.tempFn;
     return result;
 }
