@@ -22,6 +22,9 @@ Array.prototype.filter = function (callBack) {
 
 
 let oldArr = [false, false, false];
-let newArr = oldArr.filter(item => item);
+let newArr = oldArr.filter((item,i) => {
+    console.log(i);
+    return item;
+});
 
 console.log(newArr);
